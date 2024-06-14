@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+            text-align: left;
+            background-color: #fff;
+            color: #000;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 80px 20px 20px 20px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .faq {
+            padding: 20px;
+        }
+
+        .faq h2 {
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .faq-item p {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <nav>
+            <ul>
+                <li><a href="shop1.html">Home</a></li>
+                <li><a href="shop2.html">Products</a></li>
+                <li><a href="shop3.html">FAQ</a></li>
+                <li><a href="shop4.html">Login</a></li>
+                <li><a href="shop5.html">Sign Up</a></li>
+                <li><a href="shop6.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">How can I track my order?</h3>
+            <p>To track your order, log into your account and go to the "My Orders" section. There you can see the status of your order.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">What payment methods do you accept?</h3>
+            <p>We accept various payment methods including credit cards, debit cards, and online payments.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">How can I return a purchased product?</h3>
+            <p>To return a product, go to the "Returns" section in your account and submit a return request. Our support team will assist you with the process.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">Can I cancel my order?</h3>
+            <p>Yes, you can cancel your order before it is shipped. To cancel an order, go to the "My Orders" section in your account and select the cancel option.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">How long does it take for my order to arrive?</h3>
+            <p>Delivery time depends on your location. Usually, it takes between 3 to 7 business days for orders to arrive.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">Can I customize your templates?</h3>
+            <p>Yes, all our templates are customizable, and you can modify them according to your needs.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(this)">Do you provide support for purchased templates?</h3>
+            <p>Yes, we provide support for all purchased templates. You can contact our support team via the "Contact Us" page.</p>
+        </div>
+    </main>
+    <footer>
+        <p>All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
